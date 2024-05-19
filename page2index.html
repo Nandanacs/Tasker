@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasker</title>
+    <link rel="stylesheet" href="page2style.css">
+</head>
+<body>
+    <div class="tasker-container">
+        <div class="sidebar">
+            <img src="todo2org.png" alt="" class="todo-img">
+            <div class="todo-task" >
+                <button>Task</button>
+            </div>
+            <select name="categoryFilter" class="category-filter" id="categoryFilter">
+                <option value="all">All</option>
+                <option value="none">None</option>
+                <option value="home">Home</option>
+                <option value="school">School</option>
+                <option value="shopping">Shopping</option>
+            </select>
+            <p>Settings</p>
+            <div class="logout-btn">
+                <button id="logoutButton"><img src="logout-removebg-preview.png" class="logout-img" alt="Logout Image"> <span>Logout</span></button> 
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>All Your Tasks</h1>
+            <div class="task-filter-section">
+                <div class="task-title">
+                    <p><strong>Tasks</strong></p>
+                </div>
+                <div class="task-filters">
+                    <input type="button" value="All" onclick="filterTasks('all')">
+                    <input type="button" value="Done" onclick="filterTasks('done')">
+                    <input type="button" value="Not done" onclick="filterTasks('notdone')">                    
+                    <img src="filter-removebg-preview(1).png" class="filter-icon" alt="">                  
+                </div>
+            </div>
+            <ul id="taskList"></ul>
+            <button onclick="showNewTaskForm()" class="new-task-btn">
+                <p><img src="add-removebg-preview.png">Add Task</p>
+            </button>
+            <div class="overlay"></div>
+            <div class="new-task-form">
+                <p>Insert name</p>
+                <input type="text" id="taskNameInput" placeholder="Task name">
+                <p>Select a category</p>
+                <select id="taskCategorySelect"> 
+                    <option value="none">None</option>
+                    <option value="home">Home</option>
+                    <option value="school">School</option>
+                    <option value="shopping">Shopping list</option>
+                    <option value="addmore">Add More</option>
+                </select>
+                 <div id="additionalCategories"></div> <!-- Container for dynamically added categories -->
+    <div class="form-buttons">
+        <button onclick="cancelNewTask()" class="cancel-btn">Cancel</button>
+        <button onclick="addTask()" class="add-btn">Add</button>
+    </div>
+                <div class="form-buttons">
+                    <button onclick="cancelNewTask()" class="cancel-btn">Cancel</button>
+                    <button onclick="addTask()" class="add-btn">Add</button>
+                </div>
+            </div>
+            <div class="delete-confirmation">
+                <p>Delete this task?</p>
+                <button class="cancel-delete-btn" id="cancelDeleteBtn">Cancel</button>
+                <button class="confirm-delete-btn" id="confirmDeleteBtn">Delete</button>
+            </div>
+            <div class="edit-task-form">
+                <p>Enter new task:</p>
+                <input type="text" id="editTaskInput"> <br>
+                <button class="cancel-edit-btn" id="cancelEditBtn">Cancel</button>
+                <button class="confirm-edit-btn" id="confirmEditBtn">Edit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>

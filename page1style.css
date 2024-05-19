@@ -1,0 +1,107 @@
+/* page1style.css */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    /* margin-top: 120px; */
+    background-color: rgba(244, 244, 244, 0.902);
+    height: 645px;
+    width: 500px;
+}
+
+.left img {
+    margin-left: 125px;
+    margin-top: 125px;
+    height: 350px;
+}
+
+.right {
+    margin-left: 120px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    margin-top: 150px;
+    font-size: 40px;
+    color: rgb(37, 31, 31);
+    font-weight: bold;
+    margin-left: -9px;
+}
+
+.please {
+    color: rgb(183, 184, 185);
+    font-size: 18px;
+    margin-top: -30px;
+}
+
+.emailname, .password-name {
+    color: rgba(59, 57, 57, 0.904);
+    font-weight: bold;
+    
+}
+
+.email input, .password input {
+    transform: translateY(6px);
+    width: 300px;
+    height: 28px;
+    border: none;
+    outline: none;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1.5px solid rgb(174, 174, 174);
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    height: 14px; /* Adjust based on design needs */
+}
+
+.remember-me {
+    margin-top: 25px;
+    display: flex;
+    gap: 4px;
+}
+
+.remember-me label {
+    color: rgb(168, 168, 168);
+}
+
+.sign-in {
+    margin-top: 10px;
+    color: white;
+}
+
+.sign-in button {
+    background-color: #874ac0;
+    border: none;
+    width: 300px;
+    height: 28px;
+    border-radius: 5px;
+}
+
+.no-ac {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.no-ac p {
+    color: rgb(168, 168, 168);
+}
+
+.no-ac button {
+    border: none;
+    background-color: white;
+    color: #874ac0;
+}
